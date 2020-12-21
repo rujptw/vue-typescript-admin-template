@@ -1,3 +1,9 @@
+/*
+ * @Date: 2020-12-16 10:09:44
+ * @LastEditors: sam
+ * @LastEditTime: 2020-12-16 14:25:38
+ * @FilePath: /monitor/vue-typescript-admin-template/src/router.ts
+ */
 import Vue from 'vue'
 import Router from 'vue-router'
 import Layout from '@/layout/index.vue'
@@ -38,120 +44,54 @@ export default new Router({
     {
       path: '/',
       component: Layout,
-      redirect: '/dashboard',
+      redirect: '/user',
       children: [
         {
-          path: 'dashboard',
-          component: () => import(/* webpackChunkName: "dashboard" */ '@/views/dashboard/index.vue'),
+          path: 'user',
+          component: () => import(/* webpackChunkName: "user" */ '@/views/user/index.vue'),
           meta: {
-            title: 'Dashboard',
-            icon: 'dashboard'
+            title: '用户',
+            icon: 'user'
           }
-        }
-      ]
-    },
-    {
-      path: '/example',
-      component: Layout,
-      redirect: '/example/tree',
-      meta: {
-        title: 'Example',
-        icon: 'example'
-      },
-      children: [
+        },
         {
-          path: 'tree',
-          component: () => import(/* webpackChunkName: "tree" */ '@/views/tree/index.vue'),
+          path: 'middleware',
+          component: () => import(/* webpackChunkName: "middleware" */ '@/views/middleware/index.vue'),
           meta: {
-            title: 'Tree',
+            title: '中间件',
             icon: 'tree'
           }
         },
         {
-          path: 'table',
-          component: () => import(/* webpackChunkName: "table" */ '@/views/table/index.vue'),
+          path: 'dataBase',
+          component: () => import(/* webpackChunkName: "middleware" */ '@/views/dataBase/index.vue'),
           meta: {
-            title: 'Table',
-            icon: 'table'
+            title: '数据库',
+            icon: 'tree'
           }
-        }
-      ]
-    },
-    {
-      path: '/form',
-      component: Layout,
-      children: [
-        {
-          path: 'index',
-          component: () => import(/* webpackChunkName: "form" */ '@/views/form/index.vue'),
-          meta: {
-            title: 'Form',
-            icon: 'form'
-          }
-        }
-      ]
-    },
-    {
-      path: '/nested',
-      component: Layout,
-      redirect: '/nested/menu1',
-      meta: {
-        title: 'Nested',
-        icon: 'nested'
-      },
-      children: [
-        {
-          path: 'menu1',
-          component: () => import(/* webpackChunkName: "menu1" */ '@/views/nested/menu1/index.vue'),
-          redirect: '/nested/menu1/menu1-1',
-          meta: { title: 'Menu1' },
-          children: [
-            {
-              path: 'menu1-1',
-              component: () => import(/* webpackChunkName: "menu1-1" */ '@/views/nested/menu1/menu1-1/index.vue'),
-              meta: { title: 'Menu1-1' }
-            },
-            {
-              path: 'menu1-2',
-              component: () => import(/* webpackChunkName: "menu1-2" */ '@/views/nested/menu1/menu1-2/index.vue'),
-              redirect: '/nested/menu1/menu1-2/menu1-2-1',
-              meta: { title: 'Menu1-2' },
-              children: [
-                {
-                  path: 'menu1-2-1',
-                  component: () => import(/* webpackChunkName: "menu1-2-1" */ '@/views/nested/menu1/menu1-2/menu1-2-1/index.vue'),
-                  meta: { title: 'Menu1-2-1' }
-                },
-                {
-                  path: 'menu1-2-2',
-                  component: () => import(/* webpackChunkName: "menu1-2-2" */ '@/views/nested/menu1/menu1-2/menu1-2-2/index.vue'),
-                  meta: { title: 'Menu1-2-2' }
-                }
-              ]
-            },
-            {
-              path: 'menu1-3',
-              component: () => import(/* webpackChunkName: "menu1-3" */ '@/views/nested/menu1/menu1-3/index.vue'),
-              meta: { title: 'Menu1-3' }
-            }
-          ]
         },
         {
-          path: 'menu2',
-          component: () => import(/* webpackChunkName: "menu2" */ '@/views/nested/menu2/index.vue'),
-          meta: { title: 'Menu2' }
-        }
-      ]
-    },
-    {
-      path: 'external-link',
-      component: Layout,
-      children: [
-        {
-          path: 'https://github.com/Armour/vue-typescript-admin-template',
+          path: 'application',
+          component: () => import(/* webpackChunkName: "application" */ '@/views/application/index.vue'),
           meta: {
-            title: 'External Link',
-            icon: 'link'
+            title: '应用',
+            icon: 'tree'
+          }
+        },
+        {
+          path: 'probe',
+          component: () => import(/* webpackChunkName: "probe" */ '@/views/probe/index.vue'),
+          meta: {
+            title: '探测',
+            icon: 'tree'
+          }
+        },
+        {
+          path: 'monitor',
+          component: () => import(/* webpackChunkName: "probe" */ '@/views/monitor/index.vue'),
+          meta: {
+            title: '监控',
+            icon: 'tree'
           }
         }
       ]

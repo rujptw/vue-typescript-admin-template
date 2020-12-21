@@ -1,3 +1,9 @@
+/*
+ * @Date: 2020-12-16 10:09:44
+ * @LastEditors: sam
+ * @LastEditTime: 2020-12-16 14:17:20
+ * @FilePath: /monitor/vue-typescript-admin-template/vue.config.js
+ */
 const path = require('path')
 const name = 'Vue Typescript Admin'
 
