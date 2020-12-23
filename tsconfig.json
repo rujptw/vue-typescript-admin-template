@@ -19,7 +19,23 @@
     "paths": {
       "@/*": [
         "src/*"
-      ]
+      ],
+      // ts中需配合chainWepack才能生效
+      "comp/*": [
+        "src/components/*"
+      ],
+      "style/*": [
+        "src/styles/*"
+      ],
+      "util/*": [
+        "src/utils/*"
+      ],
+      "asset/*": [
+        "src/assets/*"
+      ],
+      "mixin/*": [
+        "src/mixins/*"
+      ],
     },
     "lib": [
       "esnext",

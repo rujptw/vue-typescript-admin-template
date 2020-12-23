@@ -1,0 +1,84 @@
+.search__container{
+  width: 100%;
+  overflow: hidden;
+  padding-left: 30px!important;
+  padding-right: 20px!important;
+  margin-bottom: 0;
+  .el-form{
+      padding-left:0px!important;
+      .el-row {
+          margin-top: 0 !important;
+      }
+  }
+  .el-date-editor{
+      width:360px;
+  }
+  .el-form-item{
+      margin-right: 50px!important; // 90px
+      margin-bottom: 20px;
+      .el-form-item__label{
+           color:#333;
+           text-align: right;
+           line-height: 32px;
+           min-width: 72px;
+           font-weight: 400;
+           text-align: right;
+      }
+      .el-form-item__content {
+          line-height: 32px;
+      }
+      .search__action{
+          position: relative;
+          right: -42px;
+          padding-top:24px;
+      }
+      .el-input__inner{
+       height: 32px!important;
+       min-width: 240px;
+   }
+   .el-date-editor .el-range-separator {
+       height: 88%;
+   }
+  }
+  .status-item{
+   .el-form-item__label{
+       padding-right: 39px;
+      }
+  }
+  .btn__position{
+      .el-button {
+          padding-top:8px!important;
+          padding-bottom:8px!important;
+          padding-right: 25px!important;
+          padding-left: 25px!important;
+          border-radius:3px;
+      }
+
+   .el-form-item{
+       margin-right: 0px!important;
+   }
+}
+// 调整额外按钮样式
+   .only-add__new{
+       .el-button--primary{
+           margin-left: 30px;
+       }
+
+   }
+
+}
+
+// table上面按钮样式
+.other-btn__action{
+  padding-top: 10px;
+  padding-left: 20px;
+  .el-button{
+      padding-top: 8px !important;
+      padding-bottom: 7px !important;
+      padding-left: 16px;
+      padding-right: 15px;
+      margin-right: 10px;
+  }
+}
+
+

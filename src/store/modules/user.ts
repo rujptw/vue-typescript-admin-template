@@ -1,3 +1,9 @@
+/*
+ * @Date: 2020-12-16 10:09:44
+ * @LastEditors: sam
+ * @LastEditTime: 2020-12-21 15:48:58
+ * @FilePath: /vue-typescript-admin-template/src/store/modules/user.ts
+ */
 import { VuexModule, Module, Action, Mutation, getModule } from 'vuex-module-decorators'
 import { login, logout, getUserInfo } from '@/api/users'
 import { getToken, setToken, removeToken } from '@/utils/cookies'

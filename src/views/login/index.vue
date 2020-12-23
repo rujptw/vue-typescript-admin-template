@@ -5,12 +5,12 @@
       :model="loginForm"
       :rules="loginRules"
       class="login-form"
-      autocomplete="on"
+      autocomplete="off"
       label-position="left"
     >
       <div class="title-container">
         <h3 class="title">
-          Login Form
+          后管系统
         </h3>
       </div>
 
@@ -23,8 +23,8 @@
           v-model="loginForm.username"
           name="username"
           type="text"
-          autocomplete="on"
-          placeholder="username"
+          autocomplete="off"
+          placeholder="请输入用户名"
         />
       </el-form-item>
 
@@ -37,9 +37,9 @@
           ref="password"
           v-model="loginForm.password"
           :type="passwordType"
-          placeholder="password"
+          placeholder="请输入密码"
           name="password"
-          autocomplete="on"
+          autocomplete="off"
           @keyup.enter.native="handleLogin"
         />
         <span
@@ -49,22 +49,14 @@
           <svg-icon :name="passwordType === 'password' ? 'eye-off' : 'eye-on'" />
         </span>
       </el-form-item>
-
       <el-button
         :loading="loading"
         type="primary"
         style="width:100%; margin-bottom:30px;"
         @click.native.prevent="handleLogin"
       >
-        Sign in
+        登陆
       </el-button>
-
-      <div style="position:relative">
-        <div class="tips">
-          <span> username: admin </span>
-          <span> password: any </span>
-        </div>
-      </div>
     </el-form>
   </div>
 </template>
@@ -83,7 +75,7 @@ import { isValidUsername } from '@/utils/validate'
 export default class extends Vue {
   private validateUsername = (rule: any, value: string, callback: Function) => {
     if (!isValidUsername(value)) {
-      callback(new Error('Please enter the correct user name'))
+      callback(new Error('用户名不能为空'))
     } else {
       callback()
     }
@@ -91,7 +83,7 @@ export default class extends Vue {
 
   private validatePassword = (rule: any, value: string, callback: Function) => {
     if (value.length < 6) {
-      callback(new Error('The password can not be less than 6 digits'))
+      callback(new Error('密码不能少于6位'))
     } else {
       callback()
     }
@@ -125,6 +117,7 @@ export default class extends Vue {
   }
 
   mounted() {
+    // 无需自动填充
     if (this.loginForm.username === '') {
       (this.$refs.username as Input).focus()
     } else if (this.loginForm.password === '') {
@@ -139,6 +132,7 @@ export default class extends Vue {
       this.passwordType = 'password'
     }
     this.$nextTick(() => {
+      // 使密码框聚焦
       (this.$refs.password as Input).focus()
     })
   }
@@ -175,6 +169,7 @@ export default class extends Vue {
 
 <style lang="scss">
 // References: https://www.zhangxinxu.com/wordpress/2018/01/css-caret-color-first-line/
+// 设置了光标颜色的颜色
 @supports (-webkit-mask: none) and (not (cater-color: $loginCursorColor)) {
   .login-container .el-input {
     input { color: $loginCursorColor; }
@@ -228,18 +223,6 @@ export default class extends Vue {
     padding: 160px 35px 0;
     margin: 0 auto;
     overflow: hidden;
-  }
-
-  .tips {
-    font-size: 14px;
-    color: #fff;
-    margin-bottom: 10px;
-
-    span {
-      &:first-of-type {
-        margin-right: 16px;
-      }
-    }
   }
 
   .svg-container {

@@ -1,3 +1,9 @@
+/*
+ * @Date: 2020-12-16 10:39:23
+ * @LastEditors: sam
+ * @LastEditTime: 2020-12-21 15:41:59
+ * @FilePath: /vue-typescript-admin-template/src/permission.ts
+ */
 import router from './router'
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
@@ -12,7 +18,7 @@ const whiteList = ['/login']
 router.beforeEach(async(to: Route, _: Route, next: any) => {
   // Start progress bar
   NProgress.start()
-
+  console.log('UserModule.token', UserModule)
   // Determine whether the user has logged in
   if (UserModule.token) {
     if (to.path === '/login') {

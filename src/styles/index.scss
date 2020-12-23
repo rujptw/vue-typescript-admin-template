@@ -1,7 +1,11 @@
 // @import './variables.scss'; // Already imported in style-resources-loader
 // @import './mixins.scss'; // Already imported in style-resources-loader
+
+@import './reset.scss';
 @import './transition.scss';
 @import './svgicon.scss';
+@import './search.scss';
+
 
 /* Global scss */
 
@@ -43,5 +47,8 @@ div:focus {
 }
 
 .app-container {
-  padding: 20px;
+  padding: 20px 0;
+  margin:20px;
+  background:#fff;
 }
+

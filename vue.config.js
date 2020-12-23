@@ -1,9 +1,10 @@
 /*
  * @Date: 2020-12-16 10:09:44
  * @LastEditors: sam
- * @LastEditTime: 2020-12-16 14:17:20
- * @FilePath: /monitor/vue-typescript-admin-template/vue.config.js
+ * @LastEditTime: 2020-12-22 16:08:51
+ * @FilePath: /vue-typescript-admin-template/vue.config.js
  */
+const { resolve } = require('path')
 const path = require('path')
 const name = 'Vue Typescript Admin'
 
@@ -31,5 +32,12 @@ module.exports = {
       args[0].title = name
       return args
     })
+    // 配置别名，配合tsconfig.json
+    config.resolve.alias
+      .set('comp', resolve('src/components'))
+      .set('asset', resolve('src/assets'))
+      .set('style', resolve('src/styles'))
+      .set('util', resolve('src/utils'))
+      .set('mixin', resolve('src/mixins'))
   }
 }
