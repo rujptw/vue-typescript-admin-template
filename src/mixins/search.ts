@@ -1,7 +1,7 @@
 /*
  * @Date: 2020-12-22 16:04:55
  * @LastEditors: sam
- * @LastEditTime: 2020-12-22 17:13:04
+ * @LastEditTime: 2020-12-23 15:12:17
  * @FilePath: /vue-typescript-admin-template/src/mixins/search.ts
  */
 import { Component, Vue } from 'vue-property-decorator'

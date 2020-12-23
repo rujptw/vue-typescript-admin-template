@@ -1,7 +1,7 @@
 /*
  * @Date: 2020-12-16 10:09:44
  * @LastEditors: sam
- * @LastEditTime: 2020-12-22 16:08:51
+ * @LastEditTime: 2020-12-23 15:11:26
  * @FilePath: /vue-typescript-admin-template/vue.config.js
  */
 const { resolve } = require('path')
@@ -12,6 +12,19 @@ module.exports = {
   // TODO: Remember to change publicPath to fit your need
   publicPath: process.env.NODE_ENV === 'production' ? '/vue-typescript-admin-template/' : '/',
   lintOnSave: process.env.NODE_ENV === 'development',
+  // FIXME:配置省略文件后缀,现在是没有作用的
+  // configureWebpack: (config) => {
+  //   config.resolve = { // 配置解析文件类型,可在导入时省略
+  //     extensions: ['ts','.js', '.json', '.vue'],
+  //     alias:{//配置路径别名
+  //       'comp':resolve(__dirname,'./src/components'),
+  //       'asset':resolve(__dirname,'./src/asset'),
+  //       'style':resolve(__dirname,'./src/styles'),
+  //       'util':resolve(__dirname,'./src/utils'),
+  //       'mixin':resolve(__dirname,'./src/mixins'),
+  //     }
+  //   }
+  // },
   pwa: {
     name: name
   },

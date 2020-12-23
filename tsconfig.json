@@ -20,7 +20,7 @@
       "@/*": [
         "src/*"
       ],
-      // ts中需配合chainWepack才能生效
+      // ts中需配合vue.config.js生效
       "comp/*": [
         "src/components/*"
       ],

@@ -1,7 +1,7 @@
 <!--
  * @Date: 2020-12-16 10:09:44
  * @LastEditors: sam
- * @LastEditTime: 2020-12-22 17:49:35
+ * @LastEditTime: 2020-12-23 15:42:47
  * @FilePath: /vue-typescript-admin-template/src/views/user/index.vue
 -->
 
