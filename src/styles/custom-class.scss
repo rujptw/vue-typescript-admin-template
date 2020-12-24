@@ -1,0 +1,32 @@
+/*
+ * @Date: 2020-12-24 11:06:18
+ * @LastEditors: sam
+ * @LastEditTime: 2020-12-24 11:08:19
+ * @FilePath: /vue-typescript-admin-template/src/styles/custom-class.css
+ */
+ //dialog-通用样式
+ .my-dialog {
+   .el-dialog__header {
+     padding: 15px 20px;
+     padding-left: 30px;
+     border-bottom: 1px solid #E8E8E8;
+     .el-dialog__title {
+       line-height: 24px;
+       font-size: 16px;
+       color: #333;
+     }
+     .el-dialog__headerbtn .el-dialog__close {
+       color: #8C8C8C;
+     }
+   }
+   .el-dialog__body {
+     padding: 20px 30px;
+     color: #606266;
+     font-size: 14px;
+   }
+   .el-dialog__footer {
+     padding: 10px 20px;
+     text-align: right;
+     border-top: 1px solid #E8E8E8;
+   }
+ }
