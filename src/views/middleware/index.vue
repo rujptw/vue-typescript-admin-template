@@ -1,7 +1,7 @@
 <!--
  * @Date: 2020-12-16 10:09:44
  * @LastEditors: sam
- * @LastEditTime: 2020-12-24 17:17:57
+ * @LastEditTime: 2020-12-24 18:01:45
  * @FilePath: /vue-typescript-admin-template/src/views/middleware/index.vue
 -->
 <template>
@@ -39,28 +39,49 @@ import searchMixin from 'mixin/search'
 export default class middleWare extends Mixins(searchMixin) {
     tableConfig:any=[
       {
-        label: '数据库名',
-        prop: 'dataBaseName',
+        label: '中间件名称',
+        prop: 'middleWareName',
         show: true,
         minWidth: '120px'
       },
-      { label: '用户姓名', prop: 'userName', show: true, minWidth: '120px' },
-      { label: '密码', prop: 'password' },
-      { label: '备份', prop: 'backup', show: true, minWidth: '200px' },
-      { label: '备注', prop: 'memo', show: true, minWidth: '120px' }
-
+      { label: '说明', prop: 'desc', show: true, minWidth: '120px' },
+      { label: '状态', prop: 'status', show: true }
     ]
 
-    listenSize() {
+    tableData=[
+      {
+        middleWareName: 'redis',
+        desc: '分布式',
+        status: '在线'
+      }
+    ]
 
+    operateConfig=[
+      {
+        name: '设置',
+        operate: 'manage',
+        type: 'primary'
+      }
+    ]
+
+    mounted() {
+      console.log('mounted')
+    }
+
+    listenSize() {
+      console.log('listenSize')
     }
 
     listenCurrent() {
-
+      console.log('listenCurrent')
     }
 
     listenOperate() {
+      const data = operate.scope.row
+      const key = operate.key
+      if (key === 'manage') {
 
+      }
     }
   // private filterText = '';
   // private data2 = [{
